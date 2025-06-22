@@ -11,6 +11,10 @@ async function bootstrap() {
       whitelist: true,
       forbidNonWhitelisted: true,
       validationError: { target: false, value: false },
+      transform: true, // Automatically transform payloads to DTO instances
+      transformOptions: {
+        enableImplicitConversion: true, // Enable implicit conversion for types
+      },
     }),
   );
 
